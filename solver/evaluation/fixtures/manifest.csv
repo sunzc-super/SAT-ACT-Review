@@ -1,0 +1,7 @@
+family,split,label,group,solver_seed,relative_path
+ca,valid,sat,0,0,ca/valid/group_0/sat/example.cnf
+ca,valid,unsat,0,0,ca/valid/group_0/unsat/example.cnf
+sr,valid,sat,0,0,sr/valid/group_0/sat/example.cnf
+sr,valid,unsat,0,0,sr/valid/group_0/unsat/example.cnf
+ps,valid,sat,0,0,ps/valid/group_0/sat/example.cnf
+ps,valid,unsat,0,0,ps/valid/group_0/unsat/example.cnf

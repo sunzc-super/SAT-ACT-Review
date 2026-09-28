@@ -1,0 +1,14 @@
+{
+  "public_id": "ps_satact_base",
+  "family": "ps",
+  "method": "satact_base",
+  "heuristic_supervision_weight": 0.0,
+  "heuristic_supervision_mode": "always",
+  "weight_decay": 0.0001,
+  "num_rounds": 10,
+  "embedding_dim": 128,
+  "batch_size": 64,
+  "epochs": 50,
+  "lr": 0.0001,
+  "seed": 42
+}

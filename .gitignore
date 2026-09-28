@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+build/
+*.o
+*.a
+*.so
+
+*.log
+*.tmp
+core
+core.*
+
+outputs/
+runs/

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package satact_trace;
+
+service SATActTraceServer {
+  rpc query_branch(BranchRequest) returns (BranchDecision) {}
+}
+
+enum ResponsePayload {
+  RESPONSE_PAYLOAD_UNSPECIFIED = 0;
+  RESPONSE_PAYLOAD_COMPACT = 1;
+  RESPONSE_PAYLOAD_FULL = 2;
+}
+
+enum Action {
+  ACTION_UNSPECIFIED = 0;
+  ACTION_LITERAL = 1;
+  ACTION_DEFER = 2;
+}
+
+message BranchRequest {
+  int32 n_vars = 1;
+  int32 n_clauses = 2;
+  repeated int32 c_idxs = 3;
+  repeated int32 l_idxs = 4;
+  repeated int32 assignment_value = 5;
+  repeated int32 assignment_level = 6;
+  int32 decision_level = 7;
+  repeated bool candidate_variable = 8;
+  string model_variant = 9;
+  ResponsePayload response_payload = 10;
+}
+
+message BranchDecision {
+  bool success = 1;
+  string msg = 2;
+  float n_secs_inference = 3;
+  string model_variant = 4;
+  Action action = 5;
+  int32 selected_literal_index = 6;
+  float selected_log_probability = 7;
+  ResponsePayload response_payload = 8;
+  repeated float action_logits = 9;
+}
